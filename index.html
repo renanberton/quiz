@@ -3,45 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Simples</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="quiz-container">
-        <div class="question" id="question1">
-            <h2>1. Qual é a capital da França?</h2>
-            <form>
-                <label><input type="radio" name="q1" value="a"> Paris</label><br>
-                <label><input type="radio" name="q1" value="b"> Londres</label><br>
-                <label><input type="radio" name="q1" value="c"> Berlim</label><br>
-                <button type="button" onclick="nextQuestion(1)">Responder</button>
-            </form>
-        </div>
-        <div class="question" id="question2" style="display:none;">
-            <h2>2. Qual é a fórmula química da água?</h2>
-            <form>
-                <label><input type="radio" name="q2" value="a"> H2O</label><br>
-                <label><input type="radio" name="q2" value="b"> CO2</label><br>
-                <label><input type="radio" name="q2" value="c"> NaCl</label><br>
-                <button type="button" onclick="nextQuestion(2)">Responder</button>
-            </form>
-        </div>
-        <div class="question" id="question3" style="display:none;">
-            <h2>3. Quantos continentes existem no mundo?</h2>
-            <form>
-                <label><input type="radio" name="q3" value="a"> Cinco</label><br>
-                <label><input type="radio" name="q3" value="b"> Seis</label><br>
-                <label><input type="radio" name="q3" value="c"> Sete</label><br>
-                <button type="button" onclick="nextQuestion(3)">Responder</button>
-            </form>
-        </div>
-        <div class="navigation">
-            <button id="nav1" disabled onclick="goToQuestion(1)">Questão 1</button>
-            <button id="nav2" disabled onclick="goToQuestion(2)">Questão 2</button>
-            <button id="nav3" disabled onclick="goToQuestion(3)">Questão 3</button>
-        </div>
-        <button id="finalize" style="display:none;" onclick="finalizeQuiz()">Finalizar</button>
-    </div>
+   <div class="quiz-container">
+      <div class="question" id="question1">
+         <h2><div class="number">1</div>Qual é a capital da França?</h2>
+         <div class="answer" data-question="1" data-answer="a">Paris</div>
+         <div class="answer" data-question="1" data-answer="b">Londres</div>
+         <div class="answer" data-question="1" data-answer="c">Berlim</div>
+      </div>
+      <div class="question" id="question2" style="display:none;">
+         <h2><div class="number">2</div> Qual é a fórmula química da água?</h2>
+         <div class="answer" data-question="2" data-answer="a">H2O</div>
+         <div class="answer" data-question="2" data-answer="b">CO2</div>
+         <div class="answer" data-question="2" data-answer="c">NaCl</div>
+      </div>
+      <div class="question" id="question3" style="display:none;">
+         <h2><div class="number">3</div> Quantos continentes existem no mundo?</h2>
+         <div class="answer" data-question="3" data-answer="a">Cinco</div>
+         <div class="answer" data-question="3" data-answer="b">Seis</div>
+         <div class="answer" data-question="3" data-answer="c">Sete</div>
+      </div>
+      <div id="finalize-container" style="display:none;">
+         <h3>Deseja finalizar?</h3>
+         <button id="finalize" onclick="finalizeQuiz()">Finalizar</button>
+      </div>
+   </div>
+   <div class="navigation">
+      <button id="nav1" disabled onclick="goToQuestion(1)">1</button>
+      <button id="nav2" disabled onclick="goToQuestion(2)">2</button>
+      <button id="nav3" disabled onclick="goToQuestion(3)">3</button>
+   </div>
     <script src="script.js"></script>
 </body>
 </html>
