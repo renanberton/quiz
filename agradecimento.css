@@ -13,8 +13,12 @@ body {
    background-repeat: no-repeat;
 }
 
-h2, p {
+p {
    color: #fff;
+}
+
+h2 {
+   color: #FE7B01;
 }
 
 button {
